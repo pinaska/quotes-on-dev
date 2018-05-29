@@ -7,22 +7,25 @@ const cssnano = require('gulp-cssnano');
 const uglify = require('gulp-uglify');
 const eslint = require('gulp-eslint');
 const browserSync = require('browser-sync');
+const sourcemaps = require('gulp-sourcemaps');
 
 // Create basic Gulp tasks
 
-gulp.task('sass', function () {
+gulp.task('sass', function() {
     return gulp
-        .src('./sass/style.scss', {sourcemaps: true})
-        .pipe(prettyError())
-        .pipe(sass())
-        .pipe(
-            autoprefixer({
-                browsers: ['last 2 versions']
-            })
-        )
+      .src('./sass/style.scss')
+      .pipe(sourcemaps.init())
+      .pipe(prettyError())
+      .pipe(sass())
+      .pipe(
+        autoprefixer({
+          browsers: ['last 2 versions']
+        })
+      )
         .pipe(gulp.dest('./'))
         .pipe(cssnano())
         .pipe(rename('style.min.css'))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./build/css'));
 });
 
@@ -61,7 +64,7 @@ gulp.task('browser-sync', function () {
     ];
 
     browserSync.init(files, {
-        proxy: 'localhost[:port-here]/[your-dir-name-here]'
+        proxy: 'localhost:8888/qod'
     });
 
     gulp.watch(files).on('change', browserSync.reload);

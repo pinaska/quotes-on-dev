@@ -1,0 +1,36 @@
+ .site-info{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 4.5rem 0 3rem;
+        font-weight: lighter;
+        @include desktop{
+                    justify-content: flex-end;
+        }
+        p{
+            margin: 0;
+            // display: inline;
+            padding: 5px;
+            margin-bottom: 0;
+        }
+        .footer-navigation{
+            ul{
+            display: flex;
+            li{
+                padding: 5px;
+                &:last-child a{
+                    border-right:none;
+                    }
+                    @include tablet {
+                        &:last-child a{
+                          border-right: 1px solid white;
+                        }
+                      }
+                a{
+                    display: block;
+                    padding-right: 10px;
+                    border-right: 1px solid white;
+               }
+               }
+            }
+    }
+ }

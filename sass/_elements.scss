@@ -4,7 +4,6 @@
 
 html {
 	box-sizing: border-box;
-	font-size: 1rem;
 }
 
 *,
@@ -34,15 +33,16 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 $base__space-unit ($base__space-unit * 2);
+	margin: 0;
+	padding:0;
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
 }
 
 ol {
-	list-style: decimal;
+	list-style: none;
 }
 
 li > ul,

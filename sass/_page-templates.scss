@@ -3,5 +3,132 @@
 --------------------------------------------------------------*/
 
 /* All Archives Page */
+.blog, .home, .single, .archive{
+    // @include desktop{
+    //     margin: 0 auto;
+    //     max-width: 1080px;
+    //     padding: 2.5%;
+    //     width: 100%;
+    // }
+    margin: 0 auto;
+        max-width: 1080px;
+        padding: 2.5%;
+        width: 100%;
+
+    .site-content{
+        @include desktop{
+        margin: 4.5rem 175px 1.5rem;
+        position: relative;
+        &:before,
+        &:after {
+            color: $color__link;
+            font-family: 'FontAwesome';
+            font-size: 125px;
+            line-height: 125px;
+            position: absolute;
+            top: 0;
+        }
+        &:before {
+            content: '\f10d';
+            left: -175px;
+        }
+
+        &:after {
+            content: '\f10e';
+            right: -175px;
+        }
+        }
+    }
+    .entry-content{
+        p{
+            font-size: 1.25rem;
+            font-weight:lighter;
+            @include tablet{
+                font-size: 1.75rem;
+            }
+            @include desktop{
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .entry-meta{
+            display: inline-flex;
+
+    .entry-title{
+        font-weight:lighter;
+        margin: 0;
+        font-size: 1.25rem;
+    }
+    .source{
+        font-weight:lighter;
+         font-size: 1.25rem;
+         font-style: italic;
+        }
+  }
+  button{
+    @include desktop{
+        margin: 0 auto;
+        display: block;
+        font-size: 1.25rem;
+    }
+    @include tablet{
+    	font-size: 1.25rem;
+    }
+  }
+}
+
+/*Archive*/
+.post-archives,
+.category-archives,
+.tag-archives {
+	ul {
+        display:flex;
+        flex-wrap:wrap;
+
+		li {
+			font-size: 1rem;
+			margin-bottom: 5px;
+			margin-right: 15px;
+
+			@include tablet {
+				font-size: 1.25rem;
+			}
+		}
+    }
+}
+/*About*/
+
+.page{
+margin: 0 auto;
+max-width: 1080px;
+padding: 2.5%;
+width: 100%;
+
+        .site-content{
+        @include desktop{
+        margin: 4.5rem 175px 1.5rem;
+        position: relative;
+        &:before,
+        &:after {
+            color: $color__link;
+            font-family: 'FontAwesome';
+            font-size: 125px;
+            line-height: 125px;
+            position: absolute;
+            top: 0;
+        }
+        &:before {
+            content: '\f10d';
+            left: -175px;
+        }
+
+        &:after {
+            content: '\f10e';
+            right: -175px;
+        }
+        }
+    }
+}
+
 
 /* Submit a Quote Page */
