@@ -87,7 +87,6 @@ textarea {
 
 .search-submit {
 	border: 0;
-	float: left;
-	padding-left: $base__space-unit / 2;
-	padding-right: $base__space-unit / 2;
+	margin:0;
+
 }

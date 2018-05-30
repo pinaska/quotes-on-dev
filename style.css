@@ -451,9 +451,7 @@ textarea {
 
 .search-submit {
   border: 0;
-  float: left;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem; }
+  margin: 0; }
 
 /*--------------------------------------------------------------
 # Navigation
