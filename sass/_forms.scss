@@ -10,7 +10,7 @@ input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
 	border-color: $color__link;
-	background-color: black;
+	background-color: $color__background-body;
 	color: $color__link;
 	font-size: .75rem;
 	line-height: 1;
@@ -20,6 +20,7 @@ input[type="submit"] {
 
 	&:hover {
 		border-color: $color__link-hover;
+		color:$color__link-hover;
 	}
 
 	&:active,
@@ -30,18 +31,33 @@ input[type="submit"] {
 
 /* Fields */
 
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
+	background-color: $color__background-body;
+	border: 2px solid $color__link;
 	border-radius: 3px;
+	color: white;
+	font-weight: lighter;
+	font-size: 1rem;
+	margin-bottom:1.5rem;
+	padding: .6rem 1rem .4rem;
 
 	&:focus {
-		color: #111;
+		border-color: #fcfcd2;
+	}
+
+	@include tablet {
+		font-size: 1.25rem;
 	}
 }
 
@@ -50,10 +66,28 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-	padding: 3px;
+	width: 60%;
 }
 
 textarea {
-	padding-left: 3px;
 	width: 100%;
+}
+
+
+/* Search Form */
+
+.search-form label {
+	float: left;
+	min-width: 200px;
+}
+
+.search-form input[type="search"] {
+	width: 240px;
+}
+
+.search-submit {
+	border: 0;
+	float: left;
+	padding-left: $base__space-unit / 2;
+	padding-right: $base__space-unit / 2;
 }

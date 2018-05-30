@@ -3,13 +3,7 @@
 --------------------------------------------------------------*/
 
 /* All Archives Page */
-.blog, .home, .single, .archive{
-    // @include desktop{
-    //     margin: 0 auto;
-    //     max-width: 1080px;
-    //     padding: 2.5%;
-    //     width: 100%;
-    // }
+.blog, .home, .single, .archive, .error404, .search{
     margin: 0 auto;
         max-width: 1080px;
         padding: 2.5%;
@@ -53,6 +47,8 @@
     }
     .entry-meta{
             display: inline-flex;
+            flex-wrap:wrap;
+            margin-bottom: 3rem;
 
     .entry-title{
         font-weight:lighter;
@@ -87,7 +83,7 @@
 
 		li {
 			font-size: 1rem;
-			margin-bottom: 5px;
+			margin-bottom: 10px;
 			margin-right: 15px;
 
 			@include tablet {
@@ -96,13 +92,25 @@
 		}
     }
 }
-/*About*/
+.archive,
+.search {
+	.page-title {
+		border-bottom:1px dotted #fff;
+		margin-top: 3rem;
+		padding-bottom: 1.5rem;
+	}
+}
+.archive .hentry {
+    border-bottom: 1px dotted #fff;
+}
 
+/*About*/
 .page{
 margin: 0 auto;
 max-width: 1080px;
-padding: 2.5%;
+padding: 0 2%;
 width: 100%;
+font-weight:lighter;
 
         .site-content{
         @include desktop{
@@ -120,15 +128,64 @@ width: 100%;
         &:before {
             content: '\f10d';
             left: -175px;
-        }
+            }
 
         &:after {
             content: '\f10e';
             right: -175px;
-        }
+            }
         }
     }
 }
 
 
+
 /* Submit a Quote Page */
+#quote-submission-form {
+    div{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      label {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      input{
+        background-color: $color__background-body;
+        border: 2px solid $color__link;
+        border-radius: 3px;
+        width: 250px;
+        color: white;
+        &:focus {
+          outline: 0;
+          border-color: white;
+        }
+        @include tablet {
+          width: 450px;
+        }
+      }
+      textarea {
+        background-color: $color__background-body;
+        border: 2px solid $color__link;
+        border-radius: 3px;
+        color: white;
+        &:focus {
+          outline: 0;
+          border-color: white;
+        }
+      }
+    }
+    // input[type="submit"] {
+    //   background-color: $color__background-body;
+    //   box-shadow: none;
+    //   text-shadow: none;
+    //   border: 2px solid $color__link;
+    //   color: $color__link;
+    //   font-size: 1em;
+    //   padding: 10px 25px;
+    //   &:hover {
+    //     color: darken($color__link, 10%);
+    //     border-color: darken($color__link, 10%);
+    //   }
+    // }
+  }
