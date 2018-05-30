@@ -46,16 +46,18 @@
         }
     }
     .entry-meta{
-            display: inline-flex;
+//             display: inline-flex;
             flex-wrap:wrap;
             margin-bottom: 3rem;
 
     .entry-title{
+    	display:inline;
         font-weight:lighter;
         margin: 0;
         font-size: 1.25rem;
     }
     .source{
+    	display:inline;
         font-weight:lighter;
          font-size: 1.25rem;
          font-style: italic;
