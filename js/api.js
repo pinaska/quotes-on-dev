@@ -14,7 +14,7 @@
       cache:false,
 
     }).done(function(data){
-      console.log(data);
+      // console.log(data);
 
         //History Push State in get request try looking wp slug, should update the url with the slug
         history.pushState(null, null, data[0].slug);
@@ -33,7 +33,6 @@
           else {
           $( '.source' ).html('');
         }
-
     }).fail(function(){
 
       return 'There was an error';
@@ -41,6 +40,34 @@
     });
 
   });
+
+        $('input[type=submit]').on('click', function(e) {
+          e.preventDefault();
+          $.ajax({
+             method: 'post',
+             url: api_vars.root_url + 'wp/v2/posts/',
+             data: {
+              status: 'publish',
+              title: $('#quote-author').val(),
+              content: $('#quote-content').val(),
+              _qod_quote_source: $('#quote-source').val(),
+              _qod_quote_source_url: $('#quote-source-url').val()
+
+            },
+
+             beforeSend: function(xhr) {
+                xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
+             },
+        }).done(function () {
+            $('#quote-submission-form').hide('slow');
+            $('.entry-title').after('<p> '+ api_vars.success +'</p>');
+             });
+        }).error(function(){
+          $('#quote-submission-form').hide('slow');
+          $('.entry-title').after('<p> '+ api_vars.failure +'</p>');
+
+        });
+
 
 //Widnow Pop State //when you click arrows
         $(window).on('popstate', function(){
