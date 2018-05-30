@@ -657,17 +657,16 @@ object {
       .blog .entry-content p, .home .entry-content p, .single .entry-content p, .archive .entry-content p, .error404 .entry-content p, .search .entry-content p {
         font-size: 2.5rem; } }
   .blog .entry-meta, .home .entry-meta, .single .entry-meta, .archive .entry-meta, .error404 .entry-meta, .search .entry-meta {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-bottom: 3rem; }
     .blog .entry-meta .entry-title, .home .entry-meta .entry-title, .single .entry-meta .entry-title, .archive .entry-meta .entry-title, .error404 .entry-meta .entry-title, .search .entry-meta .entry-title {
+      display: inline;
       font-weight: lighter;
       margin: 0;
       font-size: 1.25rem; }
     .blog .entry-meta .source, .home .entry-meta .source, .single .entry-meta .source, .archive .entry-meta .source, .error404 .entry-meta .source, .search .entry-meta .source {
+      display: inline;
       font-weight: lighter;
       font-size: 1.25rem;
       font-style: italic; }
