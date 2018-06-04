@@ -1,23 +1,18 @@
-# Quotes on Dev Starter
+# Quotes on Dev Worpdress Theme
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+ Simple Wordpress based application using Wordpress REST API endpoint using Ajax to get and post custom posts. I uses home.php as a front-page and custom page-archives and page-submit php files.
 
-## Installation
+ Theme boilerplate based on underscore.
 
-### 1. Download me (don't clone me!)
+ JavaScript (jQuery) breakdown:
+ 1. Uses Ajax to make a GET request to a WP API endpoint to dynamically add a new quote to the front page when a user clicks the 'Get a new Quote' button, and updates the URL using the history API.
+ 2. Uses Ajax to make a POST request to submit a new quote to the site, but only when a user is logged in
+ 3. Clears the quote submission form and shows a success message when a quote is successfully submitted to the database.
+ 4. Shows an error message when a quote is not successfully submitted to the database.
 
-Then add me to your `wp-content/themes` directory.
+-----------------------------------------------------------------------------------
+### personal learning:
+I want to use the API to build a custome Wordpress blog reader, fetching data from my favourite blogs' json files. It was not required for the Quotes on Dev, but I found out how to get data such as featured image or category name, which are embeded data in json file.
 
-### 2. Rename the `quotesondev-starter-master` directory
-
-Make sure that the theme directory name is project appropriate! Do you need `starter` or `master` in the directory name?
-
-### 3. Install the dev dependencies
-
-Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
-
-### 4. Update the proxy in `gulpfile.js`
-
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
-
-And now would be a good time to `git init` :)
+__________________________________________________________________________________
+:computer: [check my other projects](https://github.com/pinaska)

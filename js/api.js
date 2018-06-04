@@ -30,13 +30,9 @@
           else {
           $( '.source' ).html('');
         }
-    
 
-        //trying to get category from json, using wp/v2/posts?_embed=true&filter[orderby]=rand&filter[data[0]s_per_page]=1 in url
-        console.log(data[0]._embedded['wp:term']);
-        // console.log(data[0]._embedded[1][0]);
-        // // var postCat= data._embedded['wp:term'].
-        // $('body').append(data._embedded['wp:term'][2]);
+        // //trying to get category from json, using wp/v2/posts?_embed=true&filter[orderby]=rand&filter[data[0]s_per_page]=1 in url
+        // $('body').append(data[0]._embedded['wp:term'][0][0].name);
 
     }).fail(function(){
 
