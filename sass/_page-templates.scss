@@ -46,7 +46,6 @@
         }
     }
     .entry-meta{
-//             display: inline-flex;
             flex-wrap:wrap;
             margin-bottom: 3rem;
 
@@ -177,17 +176,4 @@ font-weight:lighter;
         }
       }
     }
-    // input[type="submit"] {
-    //   background-color: $color__background-body;
-    //   box-shadow: none;
-    //   text-shadow: none;
-    //   border: 2px solid $color__link;
-    //   color: $color__link;
-    //   font-size: 1em;
-    //   padding: 10px 25px;
-    //   &:hover {
-    //     color: darken($color__link, 10%);
-    //     border-color: darken($color__link, 10%);
-    //   }
-    // }
   }
